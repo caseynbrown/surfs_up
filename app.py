@@ -10,10 +10,8 @@ from sqlalchemy import create_engine, func
 
 from flask import Flask, jsonify
 
-#################################################
+
 # Set Up the Database and Flask
-# Module 9.5.1
-#################################################
 engine = create_engine("sqlite:///hawaii.sqlite")
 
 # reflect an existing database into a new model
@@ -30,13 +28,10 @@ session = Session(engine)
 
 
 # Create a New Flask App Instance
-#################################################
 app = Flask(__name__)
 
 
 # Create the Welcome Route
-#################################################
-
 @app.route('/')
 def welcome():
     return(
@@ -51,7 +46,6 @@ def welcome():
 
 
 # Precipitation Route
-#################################################
 @app.route("/api/v1.0/precipitation")
 
 def precipitation():
@@ -63,7 +57,6 @@ def precipitation():
 
 
 # Stations Route
-#################################################
 @app.route("/api/v1.0/stations")
 
 def stations():
@@ -73,7 +66,6 @@ def stations():
 
 
 # Monthly Temperature Route
-#################################################
 @app.route("/api/v1.0/tobs")
 
 def temp_monthly():
@@ -87,7 +79,6 @@ def temp_monthly():
 
 
 # Statistics Route
-#################################################
 @app.route("/api/v1.0/temp/<start>")
 @app.route("/api/v1.0/temp/<start>/<end>")
 
