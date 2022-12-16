@@ -1,6 +1,3 @@
-app.py
-
-
 
 import datetime as dt
 import numpy as np
@@ -43,13 +40,15 @@ app = Flask(__name__)
 @app.route('/')
 def welcome():
     return(
-        f"Welcome to the Hawaii Climate Analysis API!<br/>"
-        f"Available Routes:<br/>"
-        f"/api/v1.0/precipitation<br/>"
-        f"/api/v1.0/stations<br/>"
-        f"/api/v1.0/tobs<br/>"
-        f"/api/v1.0/temp/start/end"
-    )
+    '''
+    Welcome to the Climate Analysis API!
+    Available Routes:
+    /api/v1.0/precipitation
+    /api/v1.0/stations
+    /api/v1.0/tobs
+    /api/v1.0/temp/start/end
+    ''')
+
 
 # Precipitation Route
 #################################################
